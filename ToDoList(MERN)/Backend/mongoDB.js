@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 //mongoose.set('useFindAndModify', false);  /// edit ve delete warning i almamak için bu kodu yazın
 
-mongoose.connect("mongodb+srv://dbUser:Apocalypsei1@clusterfirst.xo5ug.mongodb.net/ToDoDb?retryWrites=true&w=majority",
+//mongoose.connect("MongoDB Connection String)",
 {useUnifiedTopology: true,useNewUrlParser: true},
 err => {
     if(!err){
