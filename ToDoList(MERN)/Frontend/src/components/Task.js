@@ -14,12 +14,17 @@ export default class Task extends Component {
     alertBas = (_id,dispatch) => {
         var foo = prompt("Edit: ")
 
-        var Task = {
-            task : foo
-        }
+        if(foo === null){
 
-        axios.put("http://localhost:4000/api/task/" + _id , Task)
-        .then(res => dispatch({type:"EDIT", payload: res.data}))
+        }
+        else{
+            var Task = {
+                task : foo
+            }
+            axios.put("http://localhost:4000/api/task/" + _id , Task)
+            .then(res => dispatch({type:"EDIT", payload: res.data}))
+        }
+        
     }
 
     render() {
